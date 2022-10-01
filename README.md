@@ -5,6 +5,7 @@ This stack is intended start development with Django as fast as possible.
 Currently Nothing
 
 ## TODO
+- [ ] Use environment variables
 - [ ] Nginx container
   - [ ] Self signed SSL Certificates
 - [ ] PostgreSQL container
