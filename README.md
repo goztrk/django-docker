@@ -41,15 +41,10 @@ Postgres database related variables. You can set them up however you want.
 ## TODO
 - [x] Use environment variables
   - [ ] Add ability to modify exposed ports in env
-- [x] Nginx container
-  - [x] Self signed SSL Certificates
-- [x] PostgreSQL container
-- [ ] Python container
-  - [ ] Automatic Django setup
-  - [ ] gunicorn setup
-  - [ ] PIP requirements
-    - [ ] Django:latest
-    - [ ] gunicorn:latest
+- [x] Python container
+  - [x] PIP requirements
+    - [x] Django:latest
+    - [x] gunicorn:latest
   - [ ] PIP dev requirements
     - [ ] Black
     - [ ] Flake8
