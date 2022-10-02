@@ -3,6 +3,7 @@ This stack is intended start development with Django as fast as possible.
 
 ## What does this stack have?
 - Nginx SSL web server with SSL Support
+- PostgreSQL Database server
 
 ## Setting up
 ### TL;DR
@@ -34,11 +35,15 @@ You can choose any domain name you want but it is advised not to use an actual
 exensions like `.com`. A good exension can be `.local` or `.lcl` if you want it
 shorter.
 
+### `DB_*`
+Postgres database related variables. You can set them up however you want.
+
 ## TODO
 - [x] Use environment variables
+  - [ ] Add ability to modify exposed ports in env
 - [x] Nginx container
   - [x] Self signed SSL Certificates
-- [ ] PostgreSQL container
+- [x] PostgreSQL container
 - [ ] Python container
   - [ ] Automatic Django setup
   - [ ] gunicorn setup
