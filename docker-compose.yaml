@@ -11,6 +11,8 @@ services:
       - '443:443'
     environment:
       NGINX_HOST: ${DOMAIN}
+    links:
+      - django
   database:
     image: postgres:latest
     restart: always
@@ -20,3 +22,19 @@ services:
       POSTGRES_PASSWORD: ${DB_PASS}
     ports:
       - '5432:5432'
+  django:
+    build: .
+    command: gunicorn
+    ports:
+      - '8000:8000'
+    working_dir: /app
+    environment:
+      DOMAIN: ${DOMAIN}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASS}
+      DB_PORT: ${DB_PORT}
+    volumes:
+      - ./app:/app
+    depends_on:
+      - database
