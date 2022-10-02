@@ -36,6 +36,7 @@ shorter.
 
 ## TODO
 - [x] Use environment variables
+  - [ ] Add ability to modify exposed ports in env
 - [x] Nginx container
   - [x] Self signed SSL Certificates
 - [ ] PostgreSQL container
