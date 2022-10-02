@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:stable
+    volumes:
+      - ./docker/templates/nginx:/etc/nginx/templates
+      - ./docker/certs:/etc/nginx/certs
+      - ./app:/app
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      - NGINX_HOST=${DOMAIN}
