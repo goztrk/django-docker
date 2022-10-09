@@ -7,6 +7,11 @@ This stack is intended start development with Django as fast as possible.
 
 ## Setting up
 ### TL;DR
+- Add following lines to your `.bashrc` or `.zshrc` file:
+```bash
+export UID=$(id -u)
+export GID=$(id -g)
+```
 - Duplicate file `.env.example` to `.env`
 - Setup variables in `.env` file
 - Run `./docker/scripts/generate-certs.sh` in your terminal
@@ -27,6 +32,12 @@ stacks. Just copy your `ca.key` and `ca.crt` files to same folder in other clone
 and It will use same same key to create SSL certificates.
 
 The defined domain should map to `127.0.0.1` in your `hosts` file.
+
+One of the problems with docker is that created container uses root when editing
+in files. This is especially the case with using docker in WSL2. Some dev containers
+defining `1000:1000` user and usergroup themselves but python image we are using
+don't. So it is essential to define same user inside container so that you don't
+run into trouble with GIT.
 
 ## Environment Variables
 ### `DOMAIN`
