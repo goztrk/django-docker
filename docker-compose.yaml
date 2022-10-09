@@ -23,7 +23,13 @@ services:
     ports:
       - '5432:5432'
   django:
-    build: .
+    build:
+      dockerfile: .
+      args:
+        USERNAME: ${USER}
+        USER_UID: ${UID}
+        USER_GID: ${GID}
+    user: "${UID}:${GID}"
     command: gunicorn
     ports:
       - '8000:8000'
