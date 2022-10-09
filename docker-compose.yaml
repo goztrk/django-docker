@@ -24,7 +24,7 @@ services:
       - '5432:5432'
   django:
     build:
-      dockerfile: .
+      dockerfile: ./Dockerfile
       args:
         USERNAME: ${USER}
         USER_UID: ${UID}
