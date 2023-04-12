@@ -56,7 +56,7 @@ Postgres database related variables. You can set them up however you want.
   - [x] PIP requirements
     - [x] Django:latest
     - [x] gunicorn:latest
-  - [-] PIP dev requirements
+  - [x] PIP dev requirements
     - [x] Black
     - [x] Pylint
     - [x] isort
