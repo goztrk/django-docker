@@ -56,10 +56,12 @@ Postgres database related variables. You can set them up however you want.
   - [x] PIP requirements
     - [x] Django:latest
     - [x] gunicorn:latest
-  - [ ] PIP dev requirements
-    - [ ] Black
-    - [ ] Flake8
+  - [-] PIP dev requirements
+    - [x] Black
+    - [x] Pylint
+    - [x] isort
     - [ ] pre-commit
+    - [ ] ~~Flake8~~
   - [ ] Node LTS
     - [ ] Vite
     - [ ] eslint
