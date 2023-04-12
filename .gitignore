@@ -1,2 +1,11 @@
 app/node_modules
 docker/certs/*
+
+# Yarn Zero Install
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
