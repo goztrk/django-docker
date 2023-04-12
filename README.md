@@ -60,7 +60,7 @@ Postgres database related variables. You can set them up however you want.
     - [x] Black
     - [x] Pylint
     - [x] isort
-    - [ ] pre-commit
+    - [x] pre-commit
     - [ ] ~~Flake8~~
   - [ ] Node LTS
     - [ ] Vite
