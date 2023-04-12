@@ -1,0 +1,15 @@
+[tool.isort]
+profile = "black"
+multi_line_output = 8
+known_django = "django"
+known_zion = "zion"
+known_first_party = ["app"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "DJANGO", "ZION", "FIRSTPARTY", "LOCALFOLDER"]
+import_heading_stdlib = "Python Standard Library"
+import_heading_thirdparty = "Third Party (PyPI) Imports"
+import_heading_django = "Django Imports"
+import_heading_zion = "ZION Shared Library Imports"
+import_heading_firstparty = "Application Imports"
+
+[tool.pylint.format]
+max-line-length = "88"
