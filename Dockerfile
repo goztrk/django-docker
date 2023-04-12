@@ -23,9 +23,5 @@ COPY requirements-dev.txt /requirements-dev.txt
 RUN pip install -r requirements.txt
 RUN pip install -r requirements-dev.txt
 
-# Install Node LTS
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
-RUN apt-get install -y nodejs
-
 WORKDIR /app
 
